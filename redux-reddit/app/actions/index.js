@@ -69,7 +69,7 @@ export function fetchPostsIfNeeded(subreddit) {
   return (dispatch, getState) => {
     if (shouldFetchPosts(getState(), subreddit)) {
       // 在 thunk 里 dispatch 另一个 thunk！
-      console.log('重新拉取重新拉取重新拉取重新拉取重新拉取重新拉取')
+      console.log('重新拉取')
       return dispatch(fetchPosts(subreddit))
     } else {
       console.log('无需等待')
