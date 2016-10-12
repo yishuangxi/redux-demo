@@ -1,10 +1,40 @@
-import {combineReducers} from 'redux'
-
+import fetch from 'isomorphic-fetch'
 // ------------------------------------
 // Constants
 // ------------------------------------
 export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 export const COUNTER_DECREMENT = 'COUNTER_DECREMENT'
+
+export const FETCH_POSTS_OK = 'FETCH_POSTS_OK'
+export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE'
+
+function fetchPosts() {
+  return (dispatch, getState) => {
+    return fetch(`http://www.subreddit.com/r/reactjs.json`)
+      .then(response => response.json())
+      .then(json => dispatch(fetchPostsOk(json.data.children)))
+  }
+}
+
+export function fetchPostsOk(payload) {
+  return {
+    type: FETCH_POSTS_OK,
+    payload: payload
+  }
+}
+
+export function fetchPostsFailure(json) {
+  return {
+    type: FETCH_POSTS_FAILURE,
+    payload: 'err msg'
+  }
+}
+
+export function fetchPostsIfNeeded() {
+  return (dispatch, getState) => {
+    return dispatch(fetchPosts())
+  }
+}
 
 
 // ------------------------------------
@@ -42,31 +72,3 @@ export const doubleAsync = () => {
     })
   }
 }
-
-export const actions = {
-  increment,
-  decrement,
-  doubleAsync
-}
-
-// ------------------------------------
-// Action Handlers
-// ------------------------------------
-const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT]: (state, action) => state + action.payload,
-  [COUNTER_DECREMENT]: (state, action) => state - action.payload
-}
-
-// ------------------------------------
-// Reducer
-// ------------------------------------
-const initialState = 0
-export default function counterReducer(state = initialState, action) {
-  const handler = ACTION_HANDLERS[action.type]
-
-  return handler ? handler(state, action) : state
-}
-
-
-
-
