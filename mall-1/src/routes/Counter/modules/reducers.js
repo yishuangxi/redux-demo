@@ -1,10 +1,11 @@
 import {
   COUNTER_DECREMENT, COUNTER_INCREMENT, FETCH_POSTS_OK, FETCH_POSTS_FAILURE,
-  fetchPostsIfNeeded
+  fetchPosts, fetchPostsIfNeeded
 } from './actions'
 
 export const actions = {
-  fetchPostsIfNeeded
+  fetchPostsIfNeeded,
+  fetchPosts
 }
 
 // ------------------------------------

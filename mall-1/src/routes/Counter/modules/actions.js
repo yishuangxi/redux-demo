@@ -8,7 +8,7 @@ export const COUNTER_DECREMENT = 'COUNTER_DECREMENT'
 export const FETCH_POSTS_OK = 'FETCH_POSTS_OK'
 export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE'
 
-function fetchPosts() {
+export function fetchPosts() {
   return (dispatch, getState) => {
     return fetch(`http://www.subreddit.com/r/reactjs.json`)
       .then(response => response.json())
@@ -29,6 +29,7 @@ export function fetchPostsFailure(json) {
     payload: 'err msg'
   }
 }
+
 
 export function fetchPostsIfNeeded() {
   return (dispatch, getState) => {
