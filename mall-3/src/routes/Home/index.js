@@ -1,6 +1,7 @@
-import HomeView from './components/HomeView'
+import {connect} from 'react-redux'
+import HomeContainer from './HomeContainer'
 
 // Sync route definition
 export default {
-  component : HomeView
+  component : HomeContainer
 }
