@@ -15,9 +15,9 @@ export default class GoodsList extends Component{
         <h1>优选商品</h1>
         <ul>
         {
-          goodsList.map((item) => {
+          goodsList.map((item, index) => {
             return (
-              <GoodsItem item={item}></GoodsItem>
+              <GoodsItem key={index} item={item}></GoodsItem>
             )
           })
         }

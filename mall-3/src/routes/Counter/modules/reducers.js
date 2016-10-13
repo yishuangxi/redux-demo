@@ -3,10 +3,10 @@ import {
   fetchPosts, fetchPostsIfNeeded
 } from './actions'
 
-export const actions = {
-  fetchPostsIfNeeded,
-  fetchPosts
-}
+// export const actions = {
+//   fetchPostsIfNeeded,
+//   fetchPosts
+// }
 
 // ------------------------------------
 // Action Handlers
