@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 
 import NavBar from '../Basic/Components/NavBar'
 import Banner from './Banner'
+import GoodsList from './GoodsList'
 /*  This is a container component. Notice it does not contain any JSX,
  nor does it import React. This component is **only** responsible for
  wiring in the actions and state necessary to render a presentational
@@ -16,6 +17,7 @@ class HomeContainer extends Component {
     return (
       <div>
         <Banner/>
+        <GoodsList/>
         aaa
         <NavBar/>
       </div>
