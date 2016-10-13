@@ -5,6 +5,7 @@ import Result from './Result'
 import Share from './Share'
 import User from './User'
 import CounterRoute from './Counter'
+import About from './About'
 // import TestRoute from './Test'
 
 /*  Note: Instead of using JSX, we recommend using react-router
@@ -18,7 +19,8 @@ export const createRoutes = (store) => ({
     CounterRoute(store),
     Result(store),
     Share(store),
-    User(store)
+    User(store),
+    About(store)
     // CounterRoute(store),
     // TestRoute(store)
   ]

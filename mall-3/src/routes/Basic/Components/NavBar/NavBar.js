@@ -19,8 +19,8 @@ class NavBar extends Component {
         <Link to='/share' activeClassName='route--active' className='nav-bar-item'>
           晒单
         </Link>
-        <Link to='/user' activeClassName='route--active' className='nav-bar-item'>
-          我的
+        <Link to='/about' activeClassName='route--active' className='nav-bar-item'>
+          about
         </Link>
       </div>
     )
