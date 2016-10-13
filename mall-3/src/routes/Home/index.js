@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
-import Home from './container'
+import HomeContainer from './container'
 
 // Sync route definition
 export default {
-  component : Home
+  component : HomeContainer
 }
