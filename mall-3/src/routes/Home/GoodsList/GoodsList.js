@@ -7,23 +7,29 @@ import React, {Component} from 'react'
 import './GoodsList.scss'
 import GoodsItem from '../GoodsItem'
 
-export default class GoodsList extends Component{
-  render(){
+class GoodsList extends Component {
+  render() {
     let goodsList = [{title: "aaa", price: 111}, {title: "bbb", price: 222}, {title: "ccc", price: 333}]
     return (
       <div>
         <h1>优选商品</h1>
         <ul>
-        {
-          goodsList.map((item, index) => {
-            return (
-              <GoodsItem key={index} item={item}></GoodsItem>
-            )
-          })
-        }
+          {
+            this.props.goodsList.map((item, index) => {
+              return (
+                <GoodsItem key={item.data.id} item={item}></GoodsItem>
+              )
+            })
+          }
 
-          </ul>
+        </ul>
       </div>
     )
   }
 }
+
+GoodsList.propTypes = {
+  goodsList: React.PropTypes.array.isRequired
+}
+
+export default GoodsList

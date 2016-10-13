@@ -20,11 +20,11 @@ class HomeContainer extends Component {
   }
 
   render() {
-    console.log('this.props: ', this.props)
+    console.log('this.props: ', this.props.goodsList.length)
     return (
       <div>
         <Banner/>
-        <GoodsList/>
+        <GoodsList goodsList={this.props.goodsList}/>
         <NavBar/>
       </div>
     )
@@ -45,7 +45,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = (state) => ({
-  goodsList: state.home || []
+  goodsList: state.home.goodsList || []
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
