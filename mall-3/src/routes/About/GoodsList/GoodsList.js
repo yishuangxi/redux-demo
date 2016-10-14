@@ -11,7 +11,7 @@ class GoodsList extends Component {
   render() {
     return (
       <div>
-        <h1>优选商品</h1>
+        <h1>购买过的商品</h1>
         <ul>
           {
             this.props.goodsList.map((item, index) => {

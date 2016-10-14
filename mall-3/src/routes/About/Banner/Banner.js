@@ -9,7 +9,7 @@ export default class Banner extends Component{
   render(){
     return (
       <div className="home-banner">
-        This is banner
+        我的页面
       </div>
     )
   }

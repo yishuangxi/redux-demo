@@ -20,7 +20,7 @@ class NavBar extends Component {
           晒单
         </Link>
         <Link to='/about' activeClassName='route--active' className='nav-bar-item'>
-          about
+          我的
         </Link>
       </div>
     )
