@@ -9,7 +9,7 @@ export default (store) => ({
     require.ensure([], (require) => {
       /*  Webpack - use require callback to define
        dependencies for bundling   */
-      const Share = require('./ShareContainer').default
+      const Share = require('./container').default
       const reducer = require('./reducers').default
 
       /*  Add the reducer to the store on key 'share'  */

@@ -1,19 +1,16 @@
 /**
- * Created by Yi on 13/10/2016.
+ * Created by Yi on 14/10/2016.
  */
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 
 import NavBar from '../../Basic/Components/NavBar'
-import Banner from '../Banner'
-import GoodsList from '../GoodsList'
 
 import CSSModules from 'react-css-modules'
-import style from './Home.scss'
+import style from './Share.scss'
 
-class Home extends Component {
+class Share extends Component {
   componentDidMount() {
-    this.props.fetchGoodsList().then()
   }
 
   render() {
@@ -21,8 +18,7 @@ class Home extends Component {
     return (
       <div styleName="container">
         <div styleName="content">
-          <Banner/>
-          <GoodsList goodsList={this.props.goodsList}/>
+          晒单页面
         </div>
         <NavBar/>
       </div>
@@ -30,8 +26,8 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
+Share.propTypes = {
   goodsList: PropTypes.array.isRequired
 }
 
-export default CSSModules(Home, style)
+export default CSSModules(Share, style)
