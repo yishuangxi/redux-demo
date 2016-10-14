@@ -4,13 +4,15 @@
 
 import React, {Component} from 'react'
 import {IndexLink, Link} from 'react-router'
-import './NavBar.scss'
+
+import CSSModules from 'react-css-modules'
+import style from './NavBar.scss'
 
 class NavBar extends Component {
   render() {
     return (
       <div className="nav-bar">
-        <IndexLink to='/' activeClassName='route--active' className='nav-bar-item'>
+        <IndexLink to='/' activeClassName='route--active' styleName='nav-bar-item'>
           夺宝
         </IndexLink>
         <Link to='/result' activeClassName='route--active' className='nav-bar-item'>
@@ -27,4 +29,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar
+export default CSSModules(NavBar, style)
