@@ -4,8 +4,8 @@ import Home from './Home'
 import Result from './Result'
 import Share from './Share'
 import User from './User'
-import CounterRoute from './Counter'
 import About from './About'
+import GoodsDetail from './GoodsDetail'
 // import TestRoute from './Test'
 
 /*  Note: Instead of using JSX, we recommend using react-router
@@ -16,11 +16,11 @@ export const createRoutes = (store) => ({
   component   : CoreLayout,
   indexRoute  : Home,
   childRoutes : [
-    CounterRoute(store),
     Result(store),
     Share(store),
     User(store),
-    About(store)
+    About(store),
+    GoodsDetail(store)
     // CounterRoute(store),
     // TestRoute(store)
   ]
