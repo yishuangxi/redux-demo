@@ -4,8 +4,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
-import NavBar from '../Basic/Components/NavBar'
-import TopBar from '../Basic/Components/TopBar'
+import NavBar from '../Common/Components/NavBar'
+import TopBar from '../Common/Components/TopBar'
 /*  This is a container component. Notice it does not contain any JSX,
  nor does it import React. This component is **only** responsible for
  wiring in the actions and state necessary to render a presentational

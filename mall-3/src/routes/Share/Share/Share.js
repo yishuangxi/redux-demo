@@ -4,7 +4,7 @@
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 
-import NavBar from '../../Basic/Components/NavBar'
+import NavBar from '../../Common/Components/NavBar'
 
 import CSSModules from 'react-css-modules'
 import style from './Share.scss'

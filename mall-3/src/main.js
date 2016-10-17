@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
-import AppContainer from './routes/Basic/Containers/AppContainer'
+import AppContainer from './routes/Common/Containers/AppContainer'
 
 // ========================================================
 // Store Instantiation

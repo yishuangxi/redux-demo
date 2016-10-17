@@ -1,5 +1,5 @@
 // We only need to import the modules necessary for initial render
-import CoreLayout from './Basic/Layouts'
+import CoreLayout from './Common/Layouts'
 import Home from './Home'
 import Result from './Result'
 import Share from './Share'
