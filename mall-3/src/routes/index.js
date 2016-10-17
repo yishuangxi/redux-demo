@@ -4,7 +4,6 @@ import Home from './Home'
 import Result from './Result'
 import Share from './Share'
 import User from './User'
-import About from './About'
 import GoodsDetail from './GoodsDetail'
 // import TestRoute from './Test'
 
@@ -19,7 +18,6 @@ export const createRoutes = (store) => ({
     Result(store),
     Share(store),
     User(store),
-    About(store),
     GoodsDetail(store)
     // CounterRoute(store),
     // TestRoute(store)
