@@ -3,14 +3,16 @@
  */
 
 import React, {Component} from 'react'
-
-import './Banner.scss'
-export default class Banner extends Component{
+import CSSModules from 'react-css-modules'
+import style from  './Banner.scss'
+class Banner extends Component{
   render(){
     return (
-      <div className="home-banner">
+      <div styleName="home-banner">
         This is banner
       </div>
     )
   }
 }
+
+export default CSSModules(Banner, style)
